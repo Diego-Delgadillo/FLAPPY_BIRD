@@ -95,6 +95,7 @@
             // 
             // gameTimer
             // 
+            gameTimer.Enabled = true;
             gameTimer.Interval = 20;
             gameTimer.Tick += gameTimerEvent;
             // 
