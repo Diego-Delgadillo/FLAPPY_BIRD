@@ -30,11 +30,33 @@ namespace FLAPPY_BIRD
             //hace que se desplaze hacia la izquierda los "pipes" o tuberias
             pipeBottom.Left -= pipeSpeed;
             pipeTop.Left -= pipeSpeed;
+            scoreText.Text = "Puntuación: " + Convert.ToString(score);
+
+
+            //estas sentencias hacen que los pipes cambien de posiscion generando la ilusion de movimiento
+            if(pipeBottom.Left < -150)
+            {
+                pipeBottom.Left = 800;
+                score++;//aumenta el puntaje
+            }
+
+            if (pipeTop.Left < -180)
+            {
+                pipeTop.Left = 950;
+                score++;//aumenta el valor del puntaje
+            }
+
+            if (flappyByrd.Bounds.IntersectsWith(pipeBottom.Bounds) ||//intersecta con la tuberia del fondo 
+                flappyByrd.Bounds.IntersectsWith(pipeTop.Bounds) || //intersecta con la tuberia superior
+                flappyByrd.Bounds.IntersectsWith(ground.Bounds)) //intersecta con la parte inferior
+            {
+                endGame();//llamamos a la funcion que termina el juego
+            }
 
 
 
         }
-
+            
         private void gameKeyIsDown(object sender, KeyEventArgs e)
         {
             if(e.KeyCode == Keys.Space)
@@ -50,5 +72,12 @@ namespace FLAPPY_BIRD
                 gravity = 5;//devuelve el valor que tenía la gravedad
             }
         }
+
+        private void endGame() //metodo para que termine el juego
+        {
+            gameTimer.Stop();
+            scoreText.Text += "Game over!";
+        }
+
     }
 }
