@@ -71,12 +71,12 @@ namespace FLAPPY_BIRD
             {
                 gravity = 5;//devuelve el valor que tenía la gravedad
             }
-        }
+        }    
 
         private void endGame() //metodo para que termine el juego
         {
             gameTimer.Stop();
-            scoreText.Text += "Game over!";
+            scoreText.Text += "  Game over!";
         }
 
     }

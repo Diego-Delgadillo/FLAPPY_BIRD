@@ -85,12 +85,13 @@
             // scoreText
             // 
             scoreText.AutoSize = true;
+            scoreText.BackColor = Color.FromArgb(255, 224, 192);
             scoreText.Font = new Font("Verdana", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            scoreText.Location = new Point(21, 24);
+            scoreText.Location = new Point(200, 684);
             scoreText.Name = "scoreText";
-            scoreText.Size = new Size(123, 29);
+            scoreText.Size = new Size(199, 29);
             scoreText.TabIndex = 4;
-            scoreText.Text = "Score: 0";
+            scoreText.Text = "Puntuación: 0";
             scoreText.Click += label1_Click;
             // 
             // gameTimer
@@ -104,7 +105,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Aqua;
-            ClientSize = new Size(597, 711);
+            ClientSize = new Size(597, 731);
             Controls.Add(flappyByrd);
             Controls.Add(scoreText);
             Controls.Add(ground);
