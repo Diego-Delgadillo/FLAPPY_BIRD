@@ -65,7 +65,7 @@
             // pipeBottom
             // 
             pipeBottom.Image = Properties.Resources.pipe;
-            pipeBottom.Location = new Point(355, 369);
+            pipeBottom.Location = new Point(355, 381);
             pipeBottom.Name = "pipeBottom";
             pipeBottom.Size = new Size(100, 274);
             pipeBottom.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -105,10 +105,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Aqua;
             ClientSize = new Size(597, 711);
+            Controls.Add(flappyByrd);
             Controls.Add(scoreText);
             Controls.Add(ground);
             Controls.Add(pipeBottom);
-            Controls.Add(flappyByrd);
             Controls.Add(pipeTop);
             Name = "Form1";
             Text = "Flappy Byrd";
